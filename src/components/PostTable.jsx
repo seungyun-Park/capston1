@@ -8,42 +8,26 @@ const Table = styled.table`
   border-collapse: collapse;
   width: 80%; 
   margin: 0 auto; 
-  border: 1px solid #000000;
+  border: 1px solid white;
 `;
 
 const Tr = styled.tr`
   padding: 8px;
+  color: white;
+  font-weight: 550;
   ${({ wide }) => wide && 'width: 10%;'} /* 제목을 제외한 다른 열은 좁게 설정 */
 `;
 
 const Td = styled.td`
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid white;
   padding: 8px;
   ${({ wide }) => wide && 'width: 70%;'} /* 제목 열은 넓게 설정 */
 `;
 
 
-function PostTable(props){
-  const { postwhat } = props;
+function PostTable(){
   const navigate = useNavigate();
-  let boardPosts = data.filter(post => post.board === postwhat);
 
-  if(postwhat === 'mypost'){
-    boardPosts = [{
-      "id": 2,
-      "board": "mypost",
-      "author": "q",
-      "title": "qqq",
-      "content": "",
-      "recommends": 4,
-      "comments": [
-          {
-              "id": 21,
-              "content": ""
-          }            
-      ],
-    }]
-  }
 
   return (
         <Table>
@@ -57,7 +41,7 @@ function PostTable(props){
             </thead>
 
               <PostList
-                    posts = {boardPosts} // 필터링된 게시물 전달
+                    posts = {data} 
                     onClickItem = {(item) =>{
                         navigate(`/post/${item.id}`);
                     }}

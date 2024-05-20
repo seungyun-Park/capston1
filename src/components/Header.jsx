@@ -1,20 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink, useNavigate } from 'react-router-dom';
-import Button from './Button';
+
+const Button = styled.button`
+    padding: 4px 8px;
+    font-size: 20px;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: none;
+    font-weight: 550;
+    cursor: pointer;
+
+    color: #2f2e2e;
+    background-color: #edb320;
+    &:hover{
+        background: #e0c990;
+    }
+`;
 
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 10px 20px;
-  background-color: #f3f3f3;
-  border-bottom: 1px solid #ccc;
+  background-color: #363636;
 `;
 
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 45px;
   font-weight: bold;
-  color: #007bff;
+  color: #edb320;
 `;
 
 const Navigation = styled.div`
@@ -25,20 +39,20 @@ const Navigation = styled.div`
 `;
 
 const Linkto = styled(NavLink)`
-  margin-right: 20px;
-  margin-left: 15px;
+  margin-right: 50px;
+  margin-left: 50px;
   text-decoration: none;
   padding-top: 5px;
-  font-size: 15px;
-  color: black;
+  font-size: 35px;
+  color: #ffffff;
 
   
   &:hover {
-    color: #007bff;
+    color: #edb320;
   }
 
   &.active {
-    color: #007bff;
+    color: #edb320;
   }
 `;
 
@@ -52,22 +66,13 @@ function Header(){
 
   return (
     <HeaderWrapper>
-      <Logo>고려대 신문고</Logo>
+      <Logo>Bench.com</Logo>
       <Navigation>
         <Linkto to="/home">Home</Linkto>
-        <Linkto to="/complain">민원 게시판</Linkto>
-        <Linkto to="/report">제보 게시판</Linkto>
-        <Linkto to="/hot">HOT 게시판</Linkto>
-        <Linkto to="/announce">공지사항</Linkto>
+        <Linkto to="/board">커뮤니티</Linkto>
       </Navigation>
       <UserInfo>
-        <Linkto to="/info">내정보</Linkto>
-        <Button 
-          title="로그아웃" 
-          onClick={() => {
-            navigate("/login");
-          }}
-        />
+        <Button onClick={()=>{navigate(`/login`)}}>로그아웃</Button>
       </UserInfo>
     </HeaderWrapper>
   );

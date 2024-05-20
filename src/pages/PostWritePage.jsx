@@ -7,8 +7,10 @@ import Button from "../components/Button";
 import Header from "../components/Header"
 
 const Wrapper = styled.div`
+    background-color: #494949;
     padding: 16px;
     width: calc(100% - 32px);
+    height: 87.7vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,11 +28,6 @@ const Container = styled.div`
     }
 `;
 
-const Footer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
 
 
 function PostWritePage(props){
@@ -43,7 +40,7 @@ function PostWritePage(props){
         <>
         <Header/>
         <Wrapper>
-            <h1>민원 게시판</h1>
+            <h1 style={{color: "white"}}>게시글 작성</h1>
             <Container>
                 <TextInput
                     height = {20}
@@ -63,12 +60,6 @@ function PostWritePage(props){
                     placeHolder = "내용을 입력하세요"
                 />
 
-                <Footer>
-                    <input type="file" multiple />
-                    <div>
-                        <input type="checkbox" />익명
-                    </div>
-                </Footer>
 
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <Button

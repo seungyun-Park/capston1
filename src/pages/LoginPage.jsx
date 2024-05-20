@@ -11,24 +11,26 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: #494949;
 `;
 
 const LoginTitle = styled.h1`
   margin-bottom: 1px;
   font-family: 'Nunito';
+  color: #edb320;
 `;
 
 const Description = styled.div`
   display:flex;
   justify-content: center;
-  color: #6c6c74;
+  color: #a9a9b5;
   font-size: 12px;
 `;
 
 const MovePage = styled(NavLink)`
   margin-left: 5px;
   margin-bottom: 8px;
-  color: red;
+  color: #c98031;
   font-size: 12px;
   text-decoration: none;
 `

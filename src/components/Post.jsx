@@ -4,9 +4,10 @@ import styled from 'styled-components';
 const Tr = styled.tr`
   padding: 8px;
   &:hover{
-    background-color: lightgray;
+    background-color: #9b9b9b;
   }
     cursor: pointer;
+    color: white;
 `;
 
 const Td = styled.td`

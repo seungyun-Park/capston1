@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     width: calc(100% - 32px);
-    padding: 8px;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
@@ -12,7 +11,9 @@ const Wrapper = styled.div`
     justify-content: center;
     border: 1px solid grey;
     border-radius: 8px;
-    background: white;
+    background: #cdcdcd;
+    color: #444035;
+    height: 70px;
 `;
 
 const CommentText = styled.p`

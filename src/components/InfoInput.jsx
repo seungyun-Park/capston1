@@ -17,9 +17,10 @@ const Input = styled.input`
 
 const Label = styled.label`
   position: absolute;
-  top: -15px;
+  top: -20px;
   left: 10px; 
-  background-color: white; 
+  color: white;
+  background-color: #494949;
   padding: 0 5px; 
 `;
 
